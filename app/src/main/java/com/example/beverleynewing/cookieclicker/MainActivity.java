@@ -17,10 +17,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final ImageView imgCharmander = (ImageView)findViewById(R.id.charmander);
+        final ImageView imgPokemon = (ImageView)findViewById(R.id.charmander);
         final TextView textCounter = (TextView)findViewById(R.id.counter);
 
-        imgCharmander.setOnClickListener(new View.OnClickListener() {
+        imgPokemon.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
                 textCounter.setText("Your current score is " + currentScore);
 
                 if(currentScore == 10){
-                    imgCharmander.animate().scaleX(0).scaleY(0).rotation(360).setDuration(1000).setListener(new Animator.AnimatorListener() {
+                    imgPokemon.animate().scaleX(0).scaleY(0).rotation(360).setDuration(1000).setListener(new Animator.AnimatorListener() {
                         @Override
                         public void onAnimationStart(Animator animator) {
 
@@ -36,10 +36,10 @@ public class MainActivity extends AppCompatActivity {
 
                         @Override
                         public void onAnimationEnd(Animator animator) {
-                            imgCharmander.setImageResource(R.drawable.charmeleon);
+                            imgPokemon.setImageResource(R.drawable.charmeleon);
 
-                            imgCharmander.animate().cancel();
-                            imgCharmander.animate().scaleX(1f).scaleY(1f).rotation(360).setDuration(1000).start();
+//                            imgCharmander.animate().cancel();
+                            imgPokemon.animate().rotation(360).scaleX(1f).scaleY(1f).setDuration(1000).start();
                         }
 
                         @Override
@@ -54,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
                     }).start();
                 }
                 else if(currentScore == 20){
-                    imgCharmander.animate().cancel();
-                    imgCharmander.animate().scaleX(0).scaleY(0).rotation(360).setDuration(1000).setListener(new Animator.AnimatorListener() {
+                    imgPokemon.animate().cancel();
+                    imgPokemon.animate().scaleX(0).scaleY(0).rotation(360).setDuration(1000).setListener(new Animator.AnimatorListener() {
                         @Override
                         public void onAnimationStart(Animator animator) {
 
@@ -63,10 +63,10 @@ public class MainActivity extends AppCompatActivity {
 
                         @Override
                         public void onAnimationEnd(Animator animator) {
-                            animator.end();
-                            imgCharmander.setImageResource(R.drawable.charizard);
-                            imgCharmander.animate().cancel();
-                            imgCharmander.animate().scaleX(1f).scaleY(1f).rotation(360).setDuration(1000).start();
+//                            animator.end();
+                            imgPokemon.setImageResource(R.drawable.charizard);
+                            imgPokemon.animate().cancel();
+                            imgPokemon.animate().scaleX(1f).scaleY(1f).rotation(360).setDuration(1000).start();
                         }
 
                         @Override
