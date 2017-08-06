@@ -1,5 +1,4 @@
-# PokemonApp
-Evolve a charmander!
+# PokemonApp - Evolve a charmander!
 
 This is an android app that I started at a codebar Brighton android workshop in June 2016. 
 
